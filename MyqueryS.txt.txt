@@ -1,0 +1,2 @@
+
+SELECT * FROM usuario WHERE ID NOT IN(SELECT f_user FROM user_and_band )
