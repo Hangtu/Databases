@@ -53,4 +53,21 @@ ORDER BY folio
   INNER JOIN cat_localidad l ON
   l.id_localidad  = p.id_localidad
   WHERE tabla.cantidad_salida > tabla.cantidad_entrada 
-  ORDER BY id_pedido, fecha_salida
+  ORDER BY id_pedido, fecha_salida;
+
+
+ SELECT count(sufijo_ipejal) as cantidad FROM ipejal_receta_respaldo WHERE id_localidad = '1648'
+  AND sufijo_ipejal <> '';
+
+
+-- DISTINC: SELECT DISTINCT statement is used to return only distinct (different) values. 
+SELECT DISTINCT id_cliente FROM cat_localidad WHERE id_cliente = 2;
+
+--
+SELECT a.id_cliente, count(a.id_cliente) as conteo FROM (SELECT id_cliente, id_localidad, localidad FROM cat_localidad) a
+GROUP BY a.id_cliente
+--HAVING count (a.id_cliente) > 30
+ORDER BY a.id_cliente ASC;
+
+--DATE 2007-03-08
+SELECT CURRENT_DATE 
