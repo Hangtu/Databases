@@ -17,6 +17,10 @@ GROUP BY a.id_cliente
 --HAVING count (a.id_cliente) > 30
 ORDER BY a.id_cliente ASC;
 
+
+--WHEN
+SELECT nombre, CASE WHEN edad = '23' THEN "HELLO" WHEN edad = '1' THEN '99' ELSE edad END  FROM usuario
+
 --DATE 2007-03-08
 SELECT CURRENT_DATE 
 
