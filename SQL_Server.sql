@@ -6,7 +6,7 @@ USE <database_name>
  FROM 
  WHERE
  GROUP BY
- HAVING
+ HAVING  #Used with count,avg, sum, min
  ORDER BY
 
 #CREATE A DATABASE
@@ -25,6 +25,19 @@ CREATE DATABASE <database_name>
 
 #INSERT DATA 
 INSERT INTO <table_name> (<field1>,<field2>) VALUES (1,2),(3,4),(5,6);
+
+
+#DECLARE VARIABLES
+DECLARE @myVar AS int = 2;
+SET @myVar = 4;
+SELECT @myVar as value;
+
+#MATHEMATICAL FUNCTIONS
+POWER(3,2)  #3^2;
+SQUARE(3)   #3^3
+FLOOR(12.2)  # 12 
+CEILING(12.2) #13
+ROUND(12.366,1) #12.40
 
 #GET INFORMATION ABOUT MY TABLE
 sp_help <table_name>
